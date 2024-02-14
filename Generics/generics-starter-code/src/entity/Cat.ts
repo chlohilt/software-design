@@ -16,22 +16,8 @@ export class Cat extends Animal {
     this.climbsFurniture = climbsFurniture;
   }
 
-  static getCatsSorted(catList: Cat[]) {
-    return catList.sort((cat1, cat2) =>
-      cat1.trainingPriority < cat2.trainingPriority ? -1 : 1
-    );
-  }
-  static getCatsTrainingPriorityList(catList: Cat[]): string {
-    return catList
-      .map(
-        (cat) =>
-          cat.name + "'s training priority: " + cat.trainingPriority + "\n"
-      )
-      .join("");
-  }
-
   static getCatsSummary(catListNotSorted: Cat[]): string {
-    let catList = Cat.getCatsSorted(catListNotSorted);
+    let catList = Cat.getAnimalsSorted(catListNotSorted);
     let easiestCat = catList[0];
     let mostDifficultCat = catList[catList.length - 1];
     let easiestCatString =
@@ -53,7 +39,7 @@ export class Cat extends Animal {
       (easiestCat.climbsFurniture
         ? " It unfortunately climbs furniture a lot, leaving scratches."
         : " It fortunately does not climb furniture.");
-    let catTrainingPriorities = this.getCatsTrainingPriorityList(catList);
+    let catTrainingPriorities = this.getAnimalsTrainingPriorityList(catList);
     return (
       catTrainingPriorities +
       "\n" +
