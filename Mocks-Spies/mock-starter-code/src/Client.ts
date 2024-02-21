@@ -15,8 +15,7 @@ export class Client {
    * @return a string representation of the value times the number of decimal digits
    */
   convertValue(value: number): string {
-    // TODO: This dependency is hard-coded. This should be replaced by a call to a factory method.
-    const service = new Service();
+    const service = this.getService()
     const num_digits = service.getDecimalDigitCount(value);
     const product = value * num_digits;
     return product.toString();
@@ -33,10 +32,12 @@ export class Client {
       capStrings.push(s.toUpperCase());
     }
 
-    // TODO: This dependency is hard-coded. This should be replaced by a call to a factory method.
-    const service = new Service();
+    const service = this.getService()
     service.processList(capStrings);
   }
 
-  // TODO: write a factory method that returns a new Service
+  public getService() {
+    return new Service()
+  }
+
 }
