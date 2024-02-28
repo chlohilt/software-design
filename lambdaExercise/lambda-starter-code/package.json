@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.451.0",
+    "@types/node": "^20.11.22",
+    "moment": "^2.29.4"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf dist/"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
