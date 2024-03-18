@@ -23,7 +23,7 @@ export class LineCount extends FileProcessor {
 
   private static usage(): void {
     console.log(
-      "USAGE: npx ts-node src/LineCount.ts {-r} <dir> <file-pattern>"
+      "USAGE: npx ts-node dao/LineCount.ts {-r} <dir> <file-pattern>"
     );
   }
 

@@ -33,7 +33,7 @@ export class FileSearch extends FileProcessor {
 
   private static usage(): void {
     console.log(
-      "USAGE: npx ts-node src/FileSearch.ts {-r} <dir> <file-pattern> <search-pattern>"
+      "USAGE: npx ts-node dao/FileSearch.ts {-r} <dir> <file-pattern> <search-pattern>"
     );
   }
 
