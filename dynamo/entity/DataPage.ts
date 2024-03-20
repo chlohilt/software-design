@@ -11,4 +11,10 @@ export class DataPage<T> {
         this.values = values;
         this.hasMorePages = hasMorePages;
     }
+
+    public printValues(){
+        for (let i = 0; i < this.values.length; ++i) {
+            console.log(this.values[i])
+        }
+    }
 }
