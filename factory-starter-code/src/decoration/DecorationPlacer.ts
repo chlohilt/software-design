@@ -1,23 +1,25 @@
-export interface PatternProvider {
-  getTablecloth(): string
-}
+import {HolidayDecorationsFactory} from "../factory/HolidayDecorationsFactory";
 
-export interface HangingProvider {
-  getHanging(): string
-}
-
-export interface YardOrnamentProvider {
-  getOrnament(): string
-}
+// export interface PatternProvider {
+//   getTablecloth(): string
+// }
+//
+// export interface HangingProvider {
+//   getHanging(): string
+// }
+//
+// export interface YardOrnamentProvider {
+//   getOrnament(): string
+// }
 
 export class DecorationPlacer {
   private readonly tableclothPattern: string
   private readonly wallHanging: string
   private readonly yardOrnament: string
-  constructor(patternProvider: PatternProvider, hangingProvider: HangingProvider, yardOrnamentProvider: YardOrnamentProvider) {
-    this.tableclothPattern = patternProvider.getTablecloth()
-    this.yardOrnament = yardOrnamentProvider.getOrnament()
-    this.wallHanging = hangingProvider.getHanging()
+  constructor(holidayFactory: HolidayDecorationsFactory) {
+    this.tableclothPattern = holidayFactory.getTablecloth()
+    this.yardOrnament = holidayFactory.getOrnament()
+    this.wallHanging = holidayFactory.getHanging()
   }
 
   placeDecorations(): string {
