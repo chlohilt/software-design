@@ -1,17 +1,5 @@
 import {HolidayDecorationsFactory} from "../factory/HolidayDecorationsFactory";
 
-// export interface PatternProvider {
-//   getTablecloth(): string
-// }
-//
-// export interface HangingProvider {
-//   getHanging(): string
-// }
-//
-// export interface YardOrnamentProvider {
-//   getOrnament(): string
-// }
-
 export class DecorationPlacer {
   private readonly tableclothPattern: string
   private readonly wallHanging: string
