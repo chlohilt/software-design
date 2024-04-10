@@ -1,0 +1,8 @@
+node_modules/
+package-lock.json
+
+// ignore .txt files in any directory
+**/*.txt 
+
+// do not ignore Lorem.txt   
+!Lorem.txt  
